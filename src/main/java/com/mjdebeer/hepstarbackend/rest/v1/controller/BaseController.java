@@ -31,7 +31,7 @@ public class BaseController {
 
     @SwaggerIncluded
     @GetMapping(value = "requestTest", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> requestTest() throws IOException {
+    public ResponseEntity<String> requestTest() {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         InputStream inputStream = classloader.getResourceAsStream("test.xml");
 

@@ -24,7 +24,7 @@ public class RequestController {
     public String priceRequest(@RequestBody String xmlString) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_XML);
-        HttpEntity<Object> entity = new HttpEntity<>(xmlString, headers);
+        HttpEntity<String> entity = new HttpEntity<>(xmlString, headers);
 
         return restTemplate.exchange("https://uat.gateway.insure/", HttpMethod.POST, entity, String.class).getBody();
     }
