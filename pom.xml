@@ -13,9 +13,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hepstar-backend</name>
 	<description>hepstar-backend</description>
-	<properties>
-		<maven.compiler.release>17</maven.compiler.release>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
