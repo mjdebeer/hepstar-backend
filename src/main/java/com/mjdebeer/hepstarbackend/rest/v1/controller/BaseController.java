@@ -3,11 +3,11 @@ package com.mjdebeer.hepstarbackend.rest.v1.controller;
 import com.mjdebeer.hepstarbackend.configuration.SwaggerIncluded;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -41,7 +41,13 @@ public class BaseController {
         Scanner s = new Scanner(inputStream).useDelimiter("\\A");
         String xmlString = s.hasNext() ? s.next() : "";
 
-        return ResponseEntity.ok(requestController.priceRequest(xmlString));
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_XML);
+        HttpEntity<String> entity = new HttpEntity<>(xmlString, headers);
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        return ResponseEntity.ok(restTemplate.exchange("https://uat.gateway.insure/", HttpMethod.POST, entity, String.class).getBody());
     }
 
 }
