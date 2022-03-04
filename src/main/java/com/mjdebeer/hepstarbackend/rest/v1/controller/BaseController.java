@@ -43,11 +43,11 @@ public class BaseController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_XML);
-        HttpEntity<String> entity = new HttpEntity<>(xmlString, headers);
+        HttpEntity<String> request = new HttpEntity<>(xmlString, headers);
 
         RestTemplate restTemplate = new RestTemplate();
 
-        return ResponseEntity.ok(restTemplate.exchange("https://uat.gateway.insure/", HttpMethod.POST, entity, String.class).getBody());
+        return ResponseEntity.ok(restTemplate.postForEntity("https://uat.gateway.insure/", request, String.class).getBody());
     }
 
 }
