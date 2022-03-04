@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Scanner;
 
 @Api
 @RestController
@@ -34,16 +32,16 @@ public class BaseController {
     @SwaggerIncluded
     @GetMapping(value = "requestTest", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> requestTest() throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("test.xml"));
-        String line;
-        StringBuilder sb = new StringBuilder();
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        InputStream inputStream = classloader.getResourceAsStream("test.xml");
 
-        while((line=br.readLine())!= null){
-            sb.append(line.trim());
-        }
+//        Todo: Change this
+        assert inputStream != null;
 
+        Scanner s = new Scanner(inputStream).useDelimiter("\\A");
+        String xmlString = s.hasNext() ? s.next() : "";
 
-        return ResponseEntity.ok(requestController.priceRequest(sb.toString()));
+        return ResponseEntity.ok(requestController.priceRequest(xmlString));
     }
 
 }
