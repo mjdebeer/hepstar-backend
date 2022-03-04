@@ -34,7 +34,7 @@ public class BaseController {
     @SwaggerIncluded
     @GetMapping(value = "requestTest", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> requestTest() throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(new File("test.xml")));
+        BufferedReader br = new BufferedReader(new FileReader("test.xml"));
         String line;
         StringBuilder sb = new StringBuilder();
 
@@ -43,7 +43,7 @@ public class BaseController {
         }
 
 
-        return ResponseEntity.ok(requestController.priceRequest(xml));
+        return ResponseEntity.ok(requestController.priceRequest(sb.toString()));
     }
 
 }
