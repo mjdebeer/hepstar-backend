@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,7 +34,13 @@ public class BaseController {
     @SwaggerIncluded
     @GetMapping(value = "requestTest", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> requestTest() throws IOException {
-        String xml = Files.readString(Path.of("test.xml"));
+        BufferedReader br = new BufferedReader(new FileReader(new File("test.xml")));
+        String line;
+        StringBuilder sb = new StringBuilder();
+
+        while((line=br.readLine())!= null){
+            sb.append(line.trim());
+        }
 
 
         return ResponseEntity.ok(requestController.priceRequest(xml));
