@@ -47,7 +47,7 @@ public class BaseController {
 
         RestTemplate restTemplate = new RestTemplate();
 
-        return ResponseEntity.ok(restTemplate.postForEntity("https://uat.gateway.insure/", request, String.class).getBody());
+        return ResponseEntity.ok(restTemplate.postForEntity("https://uat.gateway.insure/products/priced", request, String.class).getBody());
     }
 
 }
