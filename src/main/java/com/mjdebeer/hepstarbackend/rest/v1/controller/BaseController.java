@@ -20,10 +20,8 @@ public class BaseController {
 
     @SwaggerIncluded
     @GetMapping(value = "test", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<BaseResponse> test() {
-        return ResponseEntity.ok(BaseResponse.builder()
-                .message("You have successfully reached the back-end!")
-                .build());
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("Hello and welcome.");
     }
 
 }
