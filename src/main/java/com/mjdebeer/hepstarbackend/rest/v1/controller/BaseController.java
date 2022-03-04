@@ -31,7 +31,7 @@ public class BaseController {
     @SwaggerIncluded
     @GetMapping(value = "requestTest", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> requestTest() throws IOException {
-        String xml = Files.readString(Path.of("/resources/test.xml"));
+        String xml = Files.readString(Path.of("test.xml"));
 
 
         return ResponseEntity.ok(requestController.priceRequest(xml));
