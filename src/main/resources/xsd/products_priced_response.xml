@@ -1,0 +1,682 @@
+<Response>
+    <Status>
+        <Code>200</Code>
+        <Description>Successful</Description>
+    </Status>
+    <Authentication>
+        <Account>imp-distributor</Account>
+        <Channel>API</Channel>
+        <Session>44b22670-db97-435f-a9c3-a86802091e3e</Session>
+        <Username>impdistributor</Username>
+        <GatewayToken/>
+        <Currency>USD</Currency>
+        <Locale>en_GB</Locale>
+    </Authentication>
+    <Session ID="44b22670-db97-435f-a9c3-a86802091e3e"></Session>
+    <ResponseParameters>
+        <Packages size="2">
+            <Package ID="1" weighting="0">
+                <PriceDetails>
+                    <PriceDetail Currency="EUR" Type="Original">29.12</PriceDetail>
+                    <PriceDetail Currency="USD" Type="ConvertedCurrency">35.0</PriceDetail>
+                </PriceDetails>
+                <PricedProduct weighting="0.0">
+                    <ProductInformation>
+                        <ID>NIA0001</ID>
+                        <Type>Cancellation</Type>
+                        <Scope>both</Scope>
+                        <Country>GB</Country>
+                        <Name>Anciallry Product</Name>
+                        <InternalName>blueribbonbags</InternalName>
+                        <Details>This is a test product</Details>
+                        <Category>ANCILLARY</Category>
+                        <ParentProductCode></ParentProductCode>
+                        <Criterias>
+                            <Criteria Name="DEPARTURE_COUNTRY">KO,AF,DZ,AS,AO,AI,AQ,AG,AR,AM,AW,AU,AZ,BS,BH,BD,BB,BZ,BJ,BM,BT,BO,BW,BR,IO,VG,BN,BF,MM,BI,KH,CM,CA,CV,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CD,CK,CR,CW,DJ,DM,DO,TL,EC,EG,SV,GQ,ER,ET,FK,FJ,PF,GA,GM,GE,GH,GL,GD,GU,GT,GG,GN,GW,GY,HT,HN,HK,IN,ID,IQ,IL,CI,JM,JP,JE,JO,KZ,KE,KI,XK,KW,KG,LA,LB,LS,LR,LY,MO,MK,MG,MW,MY,MV,ML,MH,MR,MU,YT,MX,FM,MN,MS,MA,MZ,NA,NR,NP,AN,NC,NZ,NI,NE,NG,NU,MP,KP,OM,PK,PW,PS,PA,PG,PY,PE,PH,PN,PR,QA,RE,RW,BL,WS,ST,SA,SN,SC,SL,SG,SX,SB,SO,ZA,KR,SS,LK,SH,KN,LC,MF,PM,VC,SR,SJ,SZ,TJ,TZ,TH,TG,TK,TO,TT,TN,TR,TM,TC,TV,AE,UG,UY,UZ,VU,VE,VN,VI,WF,EH,YE,ZM,ZW,TW,UK,US,AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FO,FI,FR,DE,GI,GR,HU,IS,IE,IM,IT,RS,LV,LI,LT,LU,MK,MT,MD,MC,ME,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,GB,VA,RS,GF,GP,MQ,NF,BQ</Criteria>
+                            <Criteria Name="MAX_AGE">150</Criteria>
+                            <Criteria Name="MAX_DURATION">10000</Criteria>
+                            <Criteria Name="MIN_AGE">4</Criteria>
+                            <Criteria Name="MIN_DURATION">0</Criteria>
+                            <Criteria Name="RESIDENCY">KO,AF,DZ,AS,AO,AI,AQ,AG,AR,AM,AW,AU,AZ,BS,BH,BD,BB,BZ,BJ,BM,BT,BO,BW,BR,IO,VG,BN,BF,MM,BI,KH,CM,CA,CV,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CD,CK,CR,CW,DJ,DM,DO,TL,EC,EG,SV,GQ,ER,ET,FK,FJ,PF,GA,GM,GE,GH,GL,GD,GU,GT,GG,GN,GW,GY,HT,HN,HK,IN,ID,IQ,IL,CI,JM,JP,JE,JO,KZ,KE,KI,XK,KW,KG,LA,LB,LS,LR,LY,MO,MK,MG,MW,MY,MV,ML,MH,MR,MU,YT,MX,FM,MN,MS,MA,MZ,NA,NR,NP,AN,NC,NZ,NI,NE,NG,NU,MP,KP,OM,PK,PW,PS,PA,PG,PY,PE,PH,PN,PR,QA,RE,RW,BL,WS,ST,SA,SN,SC,SL,SG,SX,SB,SO,ZA,KR,SS,LK,SH,KN,LC,MF,PM,VC,SR,SJ,SZ,TJ,TZ,TH,TG,TK,TO,TT,TN,TR,TM,TC,TV,AE,UG,UY,UZ,VU,VE,VN,VI,WF,EH,YE,ZM,ZW,TW,UK,US,AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FO,FI,FR,DE,GI,GR,HU,IS,IE,IM,IT,RS,LV,LI,LT,LU,MK,MT,MD,MC,ME,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,GB,VA,RS,GF,GP,MQ,NF,BQ</Criteria>
+                            <Criteria Name="TRIPTYPE">return</Criteria>
+                        </Criterias>
+                        <CriteriasConnectedInsured>
+                            <CriteriaConnectedInsured Name="AccompaniedAdult">
+                                <MaxAge>151</MaxAge>
+                                <MaxDuration>90</MaxDuration>
+                                <MaxLimit>99</MaxLimit>
+                                <MinAge>12</MinAge>
+                                <MinDuration>0</MinDuration>
+                                <MinLimit>0</MinLimit>
+                                <SeparatePolicy>TRUE</SeparatePolicy>
+                                <SurnameMatch>FALSE</SurnameMatch>
+                            </CriteriaConnectedInsured>
+                            <CriteriaConnectedInsured Name="AccompaniedChildren">
+                                <MaxAge>12</MaxAge>
+                                <MaxDuration>90</MaxDuration>
+                                <MaxLimit>4</MaxLimit>
+                                <MinAge>0</MinAge>
+                                <MinDuration>0</MinDuration>
+                                <MinLimit>0</MinLimit>
+                                <SeparatePolicy>FALSE</SeparatePolicy>
+                                <SurnameMatch>FALSE</SurnameMatch>
+                            </CriteriaConnectedInsured>
+                        </CriteriasConnectedInsured>
+                        <inpathcontent>
+                            <benefits>
+                                <item2>
+                                    <icon>
+                                        <![CDATA[https://ui.cltpstatic.com/images/bento/insurance/baggage_loss.svg]]>
+                                    </icon>
+                                    <text>
+                                        <![CDATA[₹7,500* on baggage loss]]>
+                                    </text>
+                                </item2>
+                                <item1>
+                                    <icon>
+                                        <![CDATA[https://ui.cltpstatic.com/images/bento/insurance/flight_delay.svg]]>
+                                    </icon>
+                                    <text>
+                                        <![CDATA[₹750* on 90 mins delay]]>
+                                    </text>
+                                </item1>
+                                <item4>
+                                    <icon>
+                                        <![CDATA[https://ui.cltpstatic.com/images/bento/insurance/quick_approval.svg]]>
+                                    </icon>
+                                    <text>
+                                        <![CDATA[Quick approval]]>
+                                    </text>
+                                </item4>
+                                <item3>
+                                    <icon>
+                                        <![CDATA[https://ui.cltpstatic.com/images/bento/insurance/medical_insurance.svg]]>
+                                    </icon>
+                                    <text>
+                                        <![CDATA[₹1 lakh* medical emergency]]>
+                                    </text>
+                                </item3>
+                            </benefits>
+                            <optout>
+                                <![CDATA[Added]]>
+                            </optout>
+                            <optin>
+                                <![CDATA[Add]]>
+                            </optin>
+                            <productname>
+                                <![CDATA[Protect your trip with travel/baggage insurance]]>
+                            </productname>
+                            <declaration>
+                                <item1>
+                                    <![CDATA[Insurance is only for Indian residents between the age group of 1-70 years. By adding insurance, you agree to Digit's terms and conditions.]]>
+                                </item1>
+                            </declaration>
+                            <benefitslink>
+                                <wording>
+                                    <![CDATA[Know more]]>
+                                </wording>
+                                <URL>
+                                    <![CDATA[http://assets.hepstar.com/documents/DemoDumbyPolicyWording.pdf]]>
+                                </URL>
+                            </benefitslink>
+                        </inpathcontent>
+                        <productcovers></productcovers>
+                        <ProductMedia></ProductMedia>
+                        <Insurer>
+                            <InsurerCode>imp-supplier</InsurerCode>
+                            <InsurerName>Implementation Supplier</InsurerName>
+                            <Contact>
+                                <Phones></Phones>
+                                <Email></Email>
+                            </Contact>
+                            <Logo>https://assets.hepstar.com/images/Insurer_Final.png</Logo>
+                        </Insurer>
+                        <PriceDetailsBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="0" MaxDays="9999" MinAge="0" MaxAge="150" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="travelitemvalue" PercentageAmount="3.5">0.0</BaseAmount>
+                            </PriceDetailBanded>
+                        </PriceDetailsBanded>
+                        <PriceDetailsConnectedInsured>
+                            <PriceDetailConnectedInsured Currency="USD">
+                                <BaseAmount Type="Surcharge" ConnectedInsuredType="AccompaniedAdult" Lowerlimit="0.0" Limit="0.0" BasedOn="">100.0</BaseAmount>
+                            </PriceDetailConnectedInsured>
+                            <PriceDetailConnectedInsured Currency="USD">
+                                <TaxFee Type="OnceOff" ConnectedInsuredType="AccompaniedAdult" Lowerlimit="0.0" Limit="0.0" BasedOn="BASEex">0.0</TaxFee>
+                            </PriceDetailConnectedInsured>
+                            <PriceDetailConnectedInsured Currency="USD">
+                                <BaseAmount Type="Surcharge" ConnectedInsuredType="AccompaniedChildren" Lowerlimit="0.0" Limit="0.0" BasedOn="">50.0</BaseAmount>
+                            </PriceDetailConnectedInsured>
+                            <PriceDetailConnectedInsured Currency="USD">
+                                <TaxFee Type="OnceOff" ConnectedInsuredType="AccompaniedChildren" Lowerlimit="0.0" Limit="0.0" BasedOn="BASEex">0.0</TaxFee>
+                            </PriceDetailConnectedInsured>
+                        </PriceDetailsConnectedInsured>
+                    </ProductInformation>
+                    <Insureds>
+                        <Insured ID="1">
+                            <DOB source="specified">1983-09-25</DOB>
+                            <DateOfBirth note="deprecated">1983-09-25</DateOfBirth>
+                            <Age source="calculated">37</Age>
+                            <Residency>AE</Residency>
+                            <Personalisation>
+                                <PersonalisationItem Type="Ticketservice" weighting="0.0">no</PersonalisationItem>
+                                <PersonalisationItem Type="Frequentflyer" weighting="0.0">no</PersonalisationItem>
+                                <PersonalisationItem Type="Tickettype" weighting="0.0">standard</PersonalisationItem>
+                                <PersonalisationItem Type="Cabinclass" weighting="0.0">economy</PersonalisationItem>
+                                <PersonalisationItem Type="age 31-50" weighting="0.0">31-50</PersonalisationItem>
+                                <PersonalisationItem Type="durarion 14 days" weighting="0.0">7-14</PersonalisationItem>
+                                <overall weighting="0.0"/>
+                            </Personalisation>
+                            <TravelInformation>
+                                <StartDate>2021-12-01</StartDate>
+                                <EndDate>2021-12-10</EndDate>
+                                <CoverCountries>
+                                    <CoverCountry>BH</CoverCountry>
+                                </CoverCountries>
+                                <TravelItemValue>1000.0</TravelItemValue>
+                                <BookingValue>2000.0</BookingValue>
+                            </TravelInformation>
+                        </Insured>
+                    </Insureds>
+                    <TravelInformation>
+                        <FlightInformations>
+                            <FlightInformation Segment="1">
+                                <Airline>EK</Airline>
+                                <SupplierReference>EK</SupplierReference>
+                                <OriginCity>CPT</OriginCity>
+                                <DestinationCity>BAH</DestinationCity>
+                                <CoverCountries>
+                                    <CoverCountry>BH</CoverCountry>
+                                </CoverCountries>
+                            </FlightInformation>
+                            <FlightInformation Segment="2">
+                                <Airline>EK</Airline>
+                                <SupplierReference>EK</SupplierReference>
+                                <OriginCity>BAH</OriginCity>
+                                <DestinationCity>CPT</DestinationCity>
+                                <CoverCountries>
+                                    <CoverCountry>ZA</CoverCountry>
+                                </CoverCountries>
+                            </FlightInformation>
+                        </FlightInformations>
+                        <Segments>2</Segments>
+                        <StartDate>2021-12-01</StartDate>
+                        <EndDate>2021-12-10</EndDate>
+                        <CoverCountries>
+                            <CoverCountry>BH</CoverCountry>
+                        </CoverCountries>
+                        <BookingValue>2000.0</BookingValue>
+                    </TravelInformation>
+                    <Segments>2</Segments>
+                    <InsuredPriceDetails>
+                        <InsuredPriceDetail ID="1">
+                            <PriceDetail Currency="EUR" Type="Original">
+                                <BaseAmount Type="OnceOff" Name="baseex" Lowerlimit="0.0" Limit="0.0" BasedOn="" PercentageOf="travelitemvalue" PercentageAmount="3.5" Identifier="" TariffCode="">29.12</BaseAmount>
+                                <Days>10</Days>
+                                <Segments>2</Segments>
+                                <TotalAmount>29.12</TotalAmount>
+                            </PriceDetail>
+                            <PriceDetail Currency="USD" Type="ConvertedCurrency">
+                                <ExchangeRate>1.202216</ExchangeRate>
+                                <BaseAmount Type="OnceOff" Name="baseex" Lowerlimit="0.0" Limit="0.0" BasedOn="" PercentageOf="travelitemvalue" PercentageAmount="3.5" Identifier="" TariffCode="">35.00</BaseAmount>
+                                <Days>10</Days>
+                                <Segments>2</Segments>
+                                <TotalAmount>35.00</TotalAmount>
+                            </PriceDetail>
+                        </InsuredPriceDetail>
+                    </InsuredPriceDetails>
+                    <PriceDetails>
+                        <PriceDetail Currency="EUR" Type="Original">
+                            <BaseAmount Type="OnceOff" Name="baseex" Lowerlimit="0.0" Limit="0.0" BasedOn="" PercentageOf="travelitemvalue" PercentageAmount="3.5" Identifier="" TariffCode="">29.12</BaseAmount>
+                            <Days>10</Days>
+                            <Segments>2</Segments>
+                            <TotalAmount>29.12</TotalAmount>
+                        </PriceDetail>
+                        <PriceDetail Currency="USD" Type="ConvertedCurrency">
+                            <ExchangeRate>1.202216</ExchangeRate>
+                            <BaseAmount Type="OnceOff" Name="baseex" Lowerlimit="0.0" Limit="0.0" BasedOn="" PercentageOf="travelitemvalue" PercentageAmount="3.5" Identifier="" TariffCode="">35.00</BaseAmount>
+                            <Days>10</Days>
+                            <Segments>2</Segments>
+                            <TotalAmount>35.00</TotalAmount>
+                        </PriceDetail>
+                    </PriceDetails>
+                </PricedProduct>
+            </Package>
+            <Package ID="2" weighting="0">
+                <PriceDetails>
+                    <PriceDetail Currency="EUR" Type="Original">14.05</PriceDetail>
+                    <PriceDetail Currency="USD" Type="ConvertedCurrency">16.89</PriceDetail>
+                </PriceDetails>
+                <PricedProduct weighting="0.0">
+                    <ProductInformation>
+                        <ID>Prod0001</ID>
+                        <Type>Travel</Type>
+                        <Scope>both</Scope>
+                        <Country>KW</Country>
+                        <Name>Classic Takaful</Name>
+                        <InternalName>axa_testproduct1</InternalName>
+                        <Details></Details>
+                        <Category>INSURANCE</Category>
+                        <ParentProductCode></ParentProductCode>
+                        <Criterias>
+                            <Criteria Name="DEPARTURE_COUNTRY">AF,DZ,AS,AO,AI,AQ,AG,AR,AM,AW,AU,AZ,BS,BH,BD,BB,BZ,BJ,BM,BT,BO,BW,BR,IO,VG,BN,BF,MM,BI,KH,CM,CA,CV,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CD,CK,CR,CW,DJ,DM,DO,TL,EC,EG,SV,GQ,ER,ET,FK,FJ,PF,GA,GM,GE,GH,GL,GD,GU,GT,GG,GN,GW,GY,HT,HN,HK,IN,ID,IQ,IL,CI,JM,JP,JE,JO,KZ,KE,KI,XK,KW,KG,LA,LB,LS,LR,LY,MO,MK,MG,MW,MY,MV,ML,MH,MR,MU,YT,MX,FM,MN,MS,MA,MZ,NA,NR,NP,AN,NC,NZ,NI,NE,NG,NU,MP,OM,PK,PW,PS,PA,PG,PY,PE,PH,PN,PR,QA,RE,RW,BL,WS,ST,SA,SN,SC,SL,SG,SX,SB,SO,ZA,KR,SS,LK,SH,KN,LC,MF,PM,VC,SR,SJ,SZ,TJ,TZ,TH,TG,TK,TO,TT,TN,TR,TM,TC,TV,AE,UG,UY,UZ,VU,VE,VN,VI,WF,EH,YE,ZM,ZW,TW,UK,US,AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FO,FI,FR,DE,GI,GR,HU,IS,IE,IM,IT,RS,LV,LI,LT,LU,MK,MT,MD,MC,ME,NL,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,GB,VA,RS,NL,GF,GP,MQ,NF,BQ</Criteria>
+                            <Criteria Name="MAX_AGE">151</Criteria>
+                            <Criteria Name="MAX_DURATION">90</Criteria>
+                            <Criteria Name="MIN_AGE">12</Criteria>
+                            <Criteria Name="OUTBOUND_COUNTRY">AF,DZ,AS,AO,AI,AQ,AG,AR,AM,AW,AU,AZ,BS,BH,BD,BB,BZ,BJ,BM,BT,BO,BW,BR,IO,VG,BN,BF,MM,BI,KH,CM,CA,CV,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CD,CK,CR,CW,DJ,DM,DO,TL,EC,EG,SV,GQ,ER,ET,FK,FJ,PF,GA,GM,GE,GH,GL,GD,GU,GT,GG,GN,GW,GY,HT,HN,HK,IN,ID,IQ,IL,CI,JM,JP,JE,JO,KZ,KE,KI,XK,KW,KG,LA,LB,LS,LR,LY,MO,MK,MG,MW,MY,MV,ML,MH,MR,MU,YT,MX,FM,MN,MS,MA,MZ,NA,NR,NP,AN,NC,NZ,NI,NE,NG,NU,MP,OM,PK,PW,PS,PA,PG,PY,PE,PH,PN,PR,QA,RE,RW,BL,WS,ST,SA,SN,SC,SL,SG,SX,SB,SO,ZA,KR,SS,LK,SH,KN,LC,MF,PM,VC,SR,SJ,SZ,TJ,TZ,TH,TG,TK,TO,TT,TN,TR,TM,TC,TV,AE,UG,UY,UZ,VU,VE,VN,VI,WF,EH,YE,ZM,ZW,TW,UK,US,AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FO,FI,FR,DE,GI,GR,HU,IS,IE,IM,IT,RS,LV,LI,LT,LU,MK,MT,MD,MC,ME,NL,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,GB,VA,RS,NL,GF,GP,MQ,NF,BQ</Criteria>
+                            <Criteria Name="RESIDENCY">AF,DZ,AS,AO,AI,AQ,AG,AR,AM,AW,AU,AZ,BS,BH,BD,BB,BZ,BJ,BM,BT,BO,BW,BR,IO,VG,BN,BF,MM,BI,KH,CM,CA,CV,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CD,CK,CR,CW,DJ,DM,DO,TL,EC,EG,SV,GQ,ER,ET,FK,FJ,PF,GA,GM,GE,GH,GL,GD,GU,GT,GG,GN,GW,GY,HT,HN,HK,IN,ID,IQ,IL,CI,JM,JP,JE,JO,KZ,KE,KI,XK,KW,KG,LA,LB,LS,LR,LY,MO,MK,MG,MW,MY,MV,ML,MH,MR,MU,YT,MX,FM,MN,MS,MA,MZ,NA,NR,NP,AN,NC,NZ,NI,NE,NG,NU,MP,OM,PK,PW,PS,PA,PG,PY,PE,PH,PN,PR,QA,RE,RW,BL,WS,ST,SA,SN,SC,SL,SG,SX,SB,SO,ZA,KR,SS,LK,SH,KN,LC,MF,PM,VC,SR,SJ,SZ,TJ,TZ,TH,TG,TK,TO,TT,TN,TR,TM,TC,TV,AE,UG,UY,UZ,VU,VE,VN,VI,WF,EH,YE,ZM,ZW,TW,UK,US,AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FO,FI,FR,DE,GI,GR,HU,IS,IE,IM,IT,RS,LV,LI,LT,LU,MK,MT,MD,MC,ME,NL,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,GB,VA,RS,NL,GF,GP,MQ,NF,BQ</Criteria>
+                            <Criteria Name="TRIPTYPE">return</Criteria>
+                        </Criterias>
+                        <CriteriasConnectedInsured>
+                            <CriteriaConnectedInsured Name="AccompaniedAdult">
+                                <MaxAge>151</MaxAge>
+                                <MaxDuration>90</MaxDuration>
+                                <MaxLimit>99</MaxLimit>
+                                <MinAge>12</MinAge>
+                                <MinDuration>0</MinDuration>
+                                <MinLimit>0</MinLimit>
+                                <SeparatePolicy>TRUE</SeparatePolicy>
+                                <SurnameMatch>FALSE</SurnameMatch>
+                            </CriteriaConnectedInsured>
+                            <CriteriaConnectedInsured Name="AccompaniedChildren">
+                                <MaxAge>12</MaxAge>
+                                <MaxDuration>90</MaxDuration>
+                                <MaxLimit>4</MaxLimit>
+                                <MinAge>0</MinAge>
+                                <MinDuration>0</MinDuration>
+                                <MinLimit>0</MinLimit>
+                                <SeparatePolicy>FALSE</SeparatePolicy>
+                                <SurnameMatch>FALSE</SurnameMatch>
+                            </CriteriaConnectedInsured>
+                        </CriteriasConnectedInsured>
+                        <inpathcontent>
+                            <benefits>
+                                <item2>
+                                    <icon>
+                                        <![CDATA[https://ui.cltpstatic.com/images/bento/insurance/baggage_loss.svg]]>
+                                    </icon>
+                                    <text>
+                                        <![CDATA[₹7,500* on baggage loss]]>
+                                    </text>
+                                </item2>
+                                <item1>
+                                    <icon>
+                                        <![CDATA[https://ui.cltpstatic.com/images/bento/insurance/flight_delay.svg]]>
+                                    </icon>
+                                    <text>
+                                        <![CDATA[₹750* on 90 mins delay]]>
+                                    </text>
+                                </item1>
+                                <item4>
+                                    <icon>
+                                        <![CDATA[https://ui.cltpstatic.com/images/bento/insurance/quick_approval.svg]]>
+                                    </icon>
+                                    <text>
+                                        <![CDATA[Quick approval]]>
+                                    </text>
+                                </item4>
+                                <item3>
+                                    <icon>
+                                        <![CDATA[https://ui.cltpstatic.com/images/bento/insurance/medical_insurance.svg]]>
+                                    </icon>
+                                    <text>
+                                        <![CDATA[₹1 lakh* medical emergency]]>
+                                    </text>
+                                </item3>
+                            </benefits>
+                            <optout>
+                                <![CDATA[Added]]>
+                            </optout>
+                            <optin>
+                                <![CDATA[Add]]>
+                            </optin>
+                            <productname>
+                                <![CDATA[Protect your trip with travel/baggage insurance]]>
+                            </productname>
+                            <declaration>
+                                <item1>
+                                    <![CDATA[Insurance is only for Indian residents between the age group of 1-70 years. By adding insurance, you agree to Digit's terms and conditions.]]>
+                                </item1>
+                            </declaration>
+                            <benefitslink>
+                                <wording>
+                                    <![CDATA[Know more]]>
+                                </wording>
+                                <URL>
+                                    <![CDATA[http://assets.hepstar.com/documents/DemoDumbyPolicyWording.pdf]]>
+                                </URL>
+                            </benefitslink>
+                        </inpathcontent>
+                        <productcovers>
+                            <productcover>
+                                <header>Accident and Sickness</header>
+                                <currency>USD</currency>
+                                <amount>20000</amount>
+                                <productcovercatergory>
+                                    <header>Emergency Medical Expenses</header>
+                                    <ordervalue>2</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Personal Accident - Adult (death in common carrier)</header>
+                                <currency>USD</currency>
+                                <amount>20000</amount>
+                                <productcovercatergory>
+                                    <header>Personal Accident</header>
+                                    <ordervalue>1</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Personal Accident - Dependent Children (death in common carrier)</header>
+                                <currency>USD</currency>
+                                <amount>10000</amount>
+                                <productcovercatergory>
+                                    <header>Personal Accident</header>
+                                    <ordervalue>1</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Personal Liability cover</header>
+                                <currency>USD</currency>
+                                <amount>5000</amount>
+                                <productcovercatergory>
+                                    <header>Personal Liability</header>
+                                    <ordervalue>7</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Legal Expenses</header>
+                                <currency>USD</currency>
+                                <amount>1000</amount>
+                                <productcovercatergory>
+                                    <header>Personal Liability</header>
+                                    <ordervalue>7</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Personal Effects and Travel documents Loss</header>
+                                <currency>USD</currency>
+                                <amount>1000</amount>
+                                <productcovercatergory>
+                                    <header>Baggage, Personal Effects &amp; Travel Document Loss</header>
+                                    <ordervalue>4</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Trip Cancellation</header>
+                                <currency>USD</currency>
+                                <amount>1000</amount>
+                                <productcovercatergory>
+                                    <header>Travel Inconvenience</header>
+                                    <ordervalue>3</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Emergency Dental Care</header>
+                                <currency>USD</currency>
+                                <amount>250</amount>
+                                <productcovercatergory>
+                                    <header>Emergency Medical Expenses</header>
+                                    <ordervalue>2</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Baggage Delay (Reimbursement of necessary expenses)</header>
+                                <currency>USD</currency>
+                                <amount>200</amount>
+                                <productcovercatergory>
+                                    <header>Baggage, Personal Effects &amp; Travel Document Loss</header>
+                                    <ordervalue>4</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Trip Delay</header>
+                                <currency>USD</currency>
+                                <amount>100</amount>
+                                <productcovercatergory>
+                                    <header>Travel Inconvenience</header>
+                                    <ordervalue>3</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Assistance Department</header>
+                                <currency> </currency>
+                                <amount>Included</amount>
+                                <productcovercatergory>
+                                    <header>Assistance Department (24 hours)</header>
+                                    <ordervalue>8</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Evacuation and Repatriation</header>
+                                <currency> </currency>
+                                <amount>Included under Emergency Medical Expenses</amount>
+                                <productcovercatergory>
+                                    <header>Emergency Medical Expenses</header>
+                                    <ordervalue>2</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Hijacking</header>
+                                <currency> </currency>
+                                <amount>USD 125 per day up to a maximum of 7 days</amount>
+                                <productcovercatergory>
+                                    <header>Hijacking</header>
+                                    <ordervalue>6</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Hospital Cash</header>
+                                <currency> </currency>
+                                <amount>USD 25 per day up to a maximum of 5 days</amount>
+                                <productcovercatergory>
+                                    <header>Hospital Cash</header>
+                                    <ordervalue>5</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                            <productcover>
+                                <header>Missed Connection</header>
+                                <currency> </currency>
+                                <amount>USD 50 per day up to USD 500</amount>
+                                <productcovercatergory>
+                                    <header>Travel Inconvenience</header>
+                                    <ordervalue>3</ordervalue>
+                                </productcovercatergory>
+                            </productcover>
+                        </productcovers>
+                        <ProductMedia>
+                            <PolicyWording>http://assets.hepstar.com/documents/DemoDumbyPolicyWording.pdf</PolicyWording>
+                        </ProductMedia>
+                        <Insurer>
+                            <InsurerCode>imp-supplier</InsurerCode>
+                            <InsurerName>Implementation Supplier</InsurerName>
+                            <Contact>
+                                <Phones></Phones>
+                                <Email></Email>
+                            </Contact>
+                            <Logo>https://assets.hepstar.com/images/Insurer_Final.png</Logo>
+                        </Insurer>
+                        <PriceDetailsBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="1" MaxDays="3" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">9.2</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="1" MaxDays="3" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">9.2</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="4" MaxDays="6" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">10.9</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="4" MaxDays="6" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">10.9</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="7" MaxDays="13" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">13.38</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="7" MaxDays="13" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">13.38</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="14" MaxDays="20" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">16.74</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="14" MaxDays="20" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">16.74</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="21" MaxDays="27" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">20.08</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="21" MaxDays="27" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">20.08</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="28" MaxDays="34" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">28.44</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="28" MaxDays="34" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">28.44</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="35" MaxDays="41" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">40.16</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="35" MaxDays="41" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">40.16</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="42" MaxDays="48" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">55.22</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="42" MaxDays="48" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">55.22</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="49" MaxDays="55" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">71.98</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="49" MaxDays="55" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">71.98</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="56" MaxDays="90" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">95.4</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <BaseAmount Type="OnceOff" Name="BASEex" MinDays="56" MaxDays="90" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="" PercentageOf="" PercentageAmount="0.0">95.4</BaseAmount>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <TaxFee Type="OnceOff" Name="taxpercentage" MinDays="1" MaxDays="90" MinAge="0" MaxAge="66" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="BASEex" PercentageOf="" PercentageAmount="0.0">5.0</TaxFee>
+                            </PriceDetailBanded>
+                            <PriceDetailBanded Currency="EUR">
+                                <TaxFee Type="OnceOff" Name="taxpercentage" MinDays="1" MaxDays="90" MinAge="149" MaxAge="151" MinReservation="0.0" MaxReservation="9.99999999E8" MinSegment="0" MaxSegment="9999" BasedOn="BASEex" PercentageOf="" PercentageAmount="0.0">5.0</TaxFee>
+                            </PriceDetailBanded>
+                        </PriceDetailsBanded>
+                        <PriceDetailsConnectedInsured>
+                            <PriceDetailConnectedInsured Currency="USD">
+                                <BaseAmount Type="Surcharge" ConnectedInsuredType="AccompaniedAdult" Lowerlimit="0.0" Limit="0.0" BasedOn="">100.0</BaseAmount>
+                            </PriceDetailConnectedInsured>
+                            <PriceDetailConnectedInsured Currency="USD">
+                                <TaxFee Type="OnceOff" ConnectedInsuredType="AccompaniedAdult" Lowerlimit="0.0" Limit="0.0" BasedOn="BASEex">5.0</TaxFee>
+                            </PriceDetailConnectedInsured>
+                            <PriceDetailConnectedInsured Currency="USD">
+                                <BaseAmount Type="Surcharge" ConnectedInsuredType="AccompaniedChildren" Lowerlimit="0.0" Limit="0.0" BasedOn="">50.0</BaseAmount>
+                            </PriceDetailConnectedInsured>
+                            <PriceDetailConnectedInsured Currency="USD">
+                                <TaxFee Type="OnceOff" ConnectedInsuredType="AccompaniedChildren" Lowerlimit="0.0" Limit="0.0" BasedOn="BASEex">5.0</TaxFee>
+                            </PriceDetailConnectedInsured>
+                        </PriceDetailsConnectedInsured>
+                    </ProductInformation>
+                    <Insureds>
+                        <Insured ID="1">
+                            <DOB source="specified">1983-09-25</DOB>
+                            <DateOfBirth note="deprecated">1983-09-25</DateOfBirth>
+                            <Age source="calculated">37</Age>
+                            <Residency>AE</Residency>
+                            <Personalisation>
+                                <PersonalisationItem Type="Ticketservice" weighting="0.0">no</PersonalisationItem>
+                                <PersonalisationItem Type="Frequentflyer" weighting="0.0">no</PersonalisationItem>
+                                <PersonalisationItem Type="Tickettype" weighting="0.0">standard</PersonalisationItem>
+                                <PersonalisationItem Type="Cabinclass" weighting="0.0">economy</PersonalisationItem>
+                                <PersonalisationItem Type="age 31-50" weighting="0.0">31-50</PersonalisationItem>
+                                <PersonalisationItem Type="durarion 14 days" weighting="0.0">7-14</PersonalisationItem>
+                                <overall weighting="0.0"/>
+                            </Personalisation>
+                            <TravelInformation>
+                                <StartDate>2021-12-01</StartDate>
+                                <EndDate>2021-12-10</EndDate>
+                                <CoverCountries>
+                                    <CoverCountry>BH</CoverCountry>
+                                </CoverCountries>
+                                <TravelItemValue>1000.0</TravelItemValue>
+                                <BookingValue>2000.0</BookingValue>
+                            </TravelInformation>
+                        </Insured>
+                    </Insureds>
+                    <TravelInformation>
+                        <FlightInformations>
+                            <FlightInformation Segment="1">
+                                <Airline>EK</Airline>
+                                <SupplierReference>EK</SupplierReference>
+                                <OriginCity>CPT</OriginCity>
+                                <DestinationCity>BAH</DestinationCity>
+                                <CoverCountries>
+                                    <CoverCountry>BH</CoverCountry>
+                                </CoverCountries>
+                            </FlightInformation>
+                            <FlightInformation Segment="2">
+                                <Airline>EK</Airline>
+                                <SupplierReference>EK</SupplierReference>
+                                <OriginCity>BAH</OriginCity>
+                                <DestinationCity>CPT</DestinationCity>
+                                <CoverCountries>
+                                    <CoverCountry>ZA</CoverCountry>
+                                </CoverCountries>
+                            </FlightInformation>
+                        </FlightInformations>
+                        <Segments>2</Segments>
+                        <StartDate>2021-12-01</StartDate>
+                        <EndDate>2021-12-10</EndDate>
+                        <CoverCountries>
+                            <CoverCountry>BH</CoverCountry>
+                        </CoverCountries>
+                        <BookingValue>2000.0</BookingValue>
+                    </TravelInformation>
+                    <Segments>2</Segments>
+                    <InsuredPriceDetails>
+                        <InsuredPriceDetail ID="1">
+                            <PriceDetail Currency="EUR" Type="Original">
+                                <TaxAmount Type="OnceOff" Name="taxpercentage" Lowerlimit="0.0" Limit="0.0" BasedOn="BASEex" PercentageOf="" PercentageAmount="0.0" Identifier="" TariffCode="">0.67</TaxAmount>
+                                <BaseAmount Type="OnceOff" Name="baseex" Lowerlimit="0.0" Limit="0.0" BasedOn="" PercentageOf="" PercentageAmount="0.0" Identifier="" TariffCode="">13.38</BaseAmount>
+                                <Days>10</Days>
+                                <Segments>2</Segments>
+                                <TotalAmount>14.05</TotalAmount>
+                            </PriceDetail>
+                            <PriceDetail Currency="USD" Type="ConvertedCurrency">
+                                <ExchangeRate>1.202216</ExchangeRate>
+                                <TaxAmount Type="OnceOff" Name="taxpercentage" Lowerlimit="0.0" Limit="0.0" BasedOn="BASEex" PercentageOf="" PercentageAmount="0.0" Identifier="" TariffCode="">0.81</TaxAmount>
+                                <BaseAmount Type="OnceOff" Name="baseex" Lowerlimit="0.0" Limit="0.0" BasedOn="" PercentageOf="" PercentageAmount="0.0" Identifier="" TariffCode="">16.09</BaseAmount>
+                                <Days>10</Days>
+                                <Segments>2</Segments>
+                                <TotalAmount>16.89</TotalAmount>
+                            </PriceDetail>
+                        </InsuredPriceDetail>
+                    </InsuredPriceDetails>
+                    <PriceDetails>
+                        <PriceDetail Currency="EUR" Type="Original">
+                            <TaxAmount Type="OnceOff" Name="taxpercentage" Lowerlimit="0.0" Limit="0.0" BasedOn="BASEex" PercentageOf="" PercentageAmount="0.0" Identifier="" TariffCode="">0.67</TaxAmount>
+                            <BaseAmount Type="OnceOff" Name="baseex" Lowerlimit="0.0" Limit="0.0" BasedOn="" PercentageOf="" PercentageAmount="0.0" Identifier="" TariffCode="">13.38</BaseAmount>
+                            <Days>10</Days>
+                            <Segments>2</Segments>
+                            <TotalAmount>14.05</TotalAmount>
+                        </PriceDetail>
+                        <PriceDetail Currency="USD" Type="ConvertedCurrency">
+                            <ExchangeRate>1.202216</ExchangeRate>
+                            <TaxAmount Type="OnceOff" Name="taxpercentage" Lowerlimit="0.0" Limit="0.0" BasedOn="BASEex" PercentageOf="" PercentageAmount="0.0" Identifier="" TariffCode="">0.81</TaxAmount>
+                            <BaseAmount Type="OnceOff" Name="baseex" Lowerlimit="0.0" Limit="0.0" BasedOn="" PercentageOf="" PercentageAmount="0.0" Identifier="" TariffCode="">16.09</BaseAmount>
+                            <Days>10</Days>
+                            <Segments>2</Segments>
+                            <TotalAmount>16.89</TotalAmount>
+                        </PriceDetail>
+                    </PriceDetails>
+                    <AccountTransactions>
+                        <AccountTransaction Currency="EUR" FeeType="commission" FeeDescription="" Identifier="">6.69</AccountTransaction>
+                        <AccountTransaction Currency="EUR" FeeType="distributorrevenue" FeeDescription="" Identifier="">6.69</AccountTransaction>
+                    </AccountTransactions>
+                </PricedProduct>
+            </Package>
+        </Packages>
+        <AdditionalFees></AdditionalFees>
+    </ResponseParameters>
+</Response>

@@ -1,16 +1,17 @@
 package com.mjdebeer.hepstarbackend;
 
-import com.mjdebeer.hepstarbackend.builder.request.DocumentWriter;
+import com.mjdebeer.hepstarbackend.services.request.RequestService;
+import com.mjdebeer.hepstarbackend.services.response.ResponseService;
 import lombok.extern.slf4j.Slf4j;
 import org.dom4j.Document;
-import org.dom4j.Element;
+import org.dom4j.DocumentException;
 import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.InputStream;
-import java.util.Iterator;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -19,10 +20,13 @@ import java.util.Scanner;
 class ApplicationTests {
 
     @Autowired
-    private DocumentWriter documentWriter;
+    private RequestService requestService;
+
+    @Autowired
+    private ResponseService responseService;
 
     @Test
-    void contextLoads() {
+    void contextLoads() throws DocumentException {
 
 //        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
 //        InputStream inputStream = classloader.getResourceAsStream("xsd/products_priced_request.xml");
@@ -32,18 +36,25 @@ class ApplicationTests {
 //
 //        System.out.println(result);
 
-        Document document = documentWriter.createDocument(true,
-                "DEP",
-                "RES",
-                "DES",
-                "2022-05-05",
-                Optional.of("2022-06-05"));
+//        Document document = requestService.buildRequestDocument(true,
+//                "DEP",
+//                "RES",
+//                "DES",
+//                "2022-05-05",
+//                Optional.of("2022-06-05"));
 
 //        Element request = document.getRootElement();
 
-        Node node = document.selectSingleNode("//Request/Authentication/Channel");
+//        Node node = document.selectSingleNode("//Request/Authentication/Channel");
 
-        log.info(node.getText());
+//        log.info(node.getText());
+
+//        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+//        InputStream inputStream = classloader.getResourceAsStream("xsd/products_priced_response.xml");
+//        SAXReader reader = new SAXReader();
+//        Document productsResponse = reader.read(inputStream);
+//
+//        responseService.readProductsDocumentAndGenerateResponse(productsResponse);
 
         // iterate through child elements of root with element name "foo"
 //        for (Iterator<Element> it = request.elementIterator("Username"); it.hasNext();) {

@@ -1,7 +1,8 @@
 package com.mjdebeer.hepstarbackend.rest.v1.controller;
 
-import com.mjdebeer.hepstarbackend.builder.request.DocumentWriter;
+import com.mjdebeer.hepstarbackend.services.request.RequestService;
 import com.mjdebeer.hepstarbackend.configuration.SwaggerIncluded;
+import com.mjdebeer.hepstarbackend.rest.v1.dto.ProductsPricedDto;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.dom4j.Document;
@@ -12,10 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.*;
-import java.util.Date;
 import java.util.Optional;
-import java.util.Scanner;
 
 @Api
 @RestController
@@ -23,38 +21,34 @@ import java.util.Scanner;
 @RequestMapping("api/v1/test")
 public class BaseController {
 
-    private final DocumentWriter documentWriter;
+    private final RequestService requestService;
 
     @SwaggerIncluded
-    @GetMapping(value = "test", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> test() {
-        return ResponseEntity.ok("Hello and welcome.");
-    }
-
-    @SwaggerIncluded
-    @GetMapping(value = "requestTest", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> requestTest(@RequestParam("oneWay") final boolean oneWay,
-                                              @RequestParam("countryOfResidency") final String countryOfResidency,
-                                              @RequestParam("departureCountry") final String departureCountry,
-                                              @RequestParam("destinationCountry") final String destinationCountry,
-                                              @RequestParam("departureDate") final String departureDate,
-                                              @RequestParam("returnDate") final String returnDate) {
-        Document productsPriced = documentWriter.createDocument(oneWay,
+    @GetMapping(value = "productsPriced", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ProductsPricedDto> requestTest(@RequestParam("oneWay") final boolean oneWay,
+                                                         @RequestParam("countryOfResidency") final String countryOfResidency,
+                                                         @RequestParam("departureCountry") final String departureCountry,
+                                                         @RequestParam("destinationCountry") final String destinationCountry,
+                                                         @RequestParam("departureDate") final String departureDate,
+                                                         @RequestParam("returnDate") final String returnDate) {
+        Document productsPriced = requestService.buildRequestDocument(oneWay,
                 departureCountry,
                 countryOfResidency,
                 destinationCountry,
                 departureDate,
-                Optional.of(returnDate));
+                Optional.ofNullable(returnDate));
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_XML);
         HttpEntity<String> request = new HttpEntity<>(productsPriced.asXML(), headers);
-
         RestTemplate restTemplate = new RestTemplate();
 
-        return ResponseEntity.ok(restTemplate.postForEntity("https://uat.gateway.insure/products/priced",
-                                                            request,
-                                                            String.class).getBody());
+        ResponseEntity<String> response = restTemplate.postForEntity("https://uat.gateway.insure/products/priced",
+                request,
+                String.class);
+
+
+        return ResponseEntity.ok(new ProductsPricedDto());
     }
 
 }

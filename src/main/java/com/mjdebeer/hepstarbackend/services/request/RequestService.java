@@ -1,6 +1,5 @@
-package com.mjdebeer.hepstarbackend.builder.request;
+package com.mjdebeer.hepstarbackend.services.request;
 
-import lombok.AllArgsConstructor;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
@@ -8,20 +7,17 @@ import org.springframework.stereotype.Service;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
-public class DocumentWriter {
+public class RequestService {
 
-
-    public Document createDocument(final boolean oneWay,
-                                   final String departureCountry,
-                                   final String countryOfResidency,
-                                   final String destinationCountry,
-                                   final String departureDate,
-                                   final Optional<String> returnDate) {
+    public Document buildRequestDocument(final boolean oneWay,
+                                         final String departureCountry,
+                                         final String countryOfResidency,
+                                         final String destinationCountry,
+                                         final String departureDate,
+                                         final Optional<String> returnDate) {
         Document document = DocumentHelper.createDocument();
         Element request = document.addElement("Request");
 

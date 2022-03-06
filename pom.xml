@@ -101,29 +101,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-xjc-plugin</artifactId>
-				<version>3.3.0</version>
-				<executions>
-					<execution>
-						<id>xjc</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>xsdtojava</goal>
-						</goals>
-						<configuration>
-							<sourceRoot>${basedir}/target/generated/main/java</sourceRoot>
-							<xsdOptions>
-								<xsdOption>
-									<xsd>${basedir}/src/main/resources/xsd/products_priced_request.xsd</xsd>
-									<packagename>products.priced.request</packagename>
-								</xsdOption>
-							</xsdOptions>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
