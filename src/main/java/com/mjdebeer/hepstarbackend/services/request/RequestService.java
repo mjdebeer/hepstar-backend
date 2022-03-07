@@ -5,19 +5,17 @@ import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.springframework.stereotype.Service;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Optional;
 
 @Service
 public class RequestService {
 
-    public Document buildRequestDocument(final boolean oneWay,
-                                         final String departureCountry,
-                                         final String countryOfResidency,
-                                         final String destinationCountry,
-                                         final String departureDate,
-                                         final Optional<String> returnDate) {
+    public Document buildPricedProductRequestDocument(final boolean oneWay,
+                                                      final String departureCountry,
+                                                      final String countryOfResidency,
+                                                      final String destinationCountry,
+                                                      final String departureDate,
+                                                      final Optional<String> returnDate) {
         Document document = DocumentHelper.createDocument();
         Element request = document.addElement("Request");
 
@@ -36,8 +34,7 @@ public class RequestService {
         Element requestParameters = request.addElement("RequestParameters");
 
         // Insureds
-        Element insureds = requestParameters.addElement("Insureds");
-        Element insured = insureds.addElement("Insured");
+        Element insured = requestParameters.addElement("Insureds").addElement("Insured");
         insured.addAttribute("ID", "1");
         insured.addElement("DOB").addText("1983-09-25");
         insured.addElement("Residency").addText(countryOfResidency);
@@ -51,11 +48,8 @@ public class RequestService {
 
         // Travel Item Val
         insured.addElement("TravelInformation").addElement("TravelItemValue").addText("1000");
-        // Insureds end
 
         // Travel Information
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
         Element travelInformation = requestParameters.addElement("TravelInformation");
         travelInformation.addElement("StartDate").addText(departureDate);
         if (!oneWay && returnDate.isPresent()) {
@@ -86,6 +80,83 @@ public class RequestService {
             flightInformationTwo.addElement("CoverCountries").addElement("CoverCountry").addText(departureCountry);
         }
 
+        return document;
+    }
+
+    public Document buildPolicyIssueDocument(final String firstName,
+                                             final String surname,
+                                             final String dateOfBirth,
+                                             final String residency,
+                                             final String nationalId,
+                                             final String email,
+                                             // From initial call
+                                             final String productId,
+                                             final boolean oneWay,
+                                             final String departureDate,
+                                             final Optional<String> returnDate,
+                                             final String departureCountry,
+                                             final String destinationCountry) {
+        Document document = DocumentHelper.createDocument();
+        Element request = document.addElement("Request");
+
+        // Authentication
+        Element authentication = request.addElement("Authentication");
+        authentication.addElement("Channel").addText("API");
+        authentication.addElement("Session").addText("{{$guid}}");
+        authentication.addElement("Username").addText("impdistributor");
+        authentication.addElement("Password").addText("FFRyEGGmMJYHA");
+        authentication.addElement("Locale").addText("en_GB");
+        authentication.addElement("Currency").addText("USD");
+
+        // Policy Request
+        Element policyRequest = request.addElement("RequestParameters").addElement("PolicyRequests").addElement("PolicyRequest");
+
+        policyRequest.addElement("DistributerReference").addText("{{$guid}}");
+        policyRequest.addElement("ProductID").addText(productId);
+
+        // Insureds
+        Element insured = policyRequest.addElement("Insureds").addElement("Insured").addAttribute("ID", "1");
+        insured.addElement("Title");
+        insured.addElement("Firstname").addText(firstName);
+        insured.addElement("Surname").addText(surname);
+        insured.addElement("DOB").addText(dateOfBirth);
+        insured.addElement("Residency").addText(residency);
+        insured.addElement("NationalID").addText(nationalId);
+        insured.addElement("TravelInformation").addElement("TravelItemValue").addText("1000");
+
+        // Contact Information
+        policyRequest.addElement("ContactInformation").addText(email);
+
+        // Travel Information
+        Element travelInformation = policyRequest.addElement("TravelInformation");
+        travelInformation.addElement("StartDate").addText(departureDate);
+        if (!oneWay && returnDate.isPresent()) {
+            travelInformation.addElement("EndDate").addText(returnDate.get());
+        }
+        travelInformation.addElement("DepartureCountry").addText(departureCountry);
+        travelInformation.addElement("CoverCountries").addElement("CoverCountry").addText(destinationCountry);
+        travelInformation.addElement("BookingValue").addText("2000");
+
+        // Flight Informations
+        Element flightInformations = travelInformation.addElement("FlightInformations");
+
+        Element flightInformationOne = flightInformations.addElement("FlightInformation").addAttribute("Segment", "1");
+        flightInformationOne.addElement("Airline").addText("EK");
+        flightInformationOne.addElement("SupplierReference").addText("309");
+        flightInformationOne.addElement("FlightNumber").addText("XYZ");
+        flightInformationOne.addElement("StartDate").addText(departureDate);
+        flightInformationOne.addElement("EndDate").addText(departureDate);
+        flightInformationOne.addElement("CoverCountries").addElement("CoverCountry").addText(destinationCountry);
+
+        if (!oneWay && returnDate.isPresent()) {
+            Element flightInformationTwo = flightInformations.addElement("FlightInformation").addAttribute("Segment", "2");
+            flightInformationTwo.addElement("Airline").addText("EK");
+            flightInformationTwo.addElement("SupplierReference").addText("309");
+            flightInformationTwo.addElement("FlightNumber").addText("XYZ");
+            flightInformationTwo.addElement("StartDate").addText(returnDate.get());
+            flightInformationTwo.addElement("EndDate").addText(returnDate.get());
+            flightInformationTwo.addElement("CoverCountries").addElement("CoverCountry").addText(departureCountry);
+        }
 
         return document;
     }

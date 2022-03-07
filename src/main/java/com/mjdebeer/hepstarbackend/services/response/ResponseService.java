@@ -8,10 +8,7 @@ import org.dom4j.Element;
 import org.dom4j.Node;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 @Service
 @Slf4j
@@ -24,22 +21,29 @@ public class ResponseService {
         for (Iterator<Element> it = packagesRoot.elementIterator("Package"); it.hasNext();) {
             Element product = it.next();
             Node currency = product.selectSingleNode("//PriceDetails/PriceDetail[1]");
+            Element productDetailsRoot = (Element) product.selectSingleNode("//PricedProduct/ProductInformation/productcovers");
             String currencyAttribute = currency.valueOf("@Currency");
+
+            log.info(productDetailsRoot.getName());
+
+            Optional<List<ProductDetailDto>> detailsList = Optional.empty();
+
+            if (productDetailsRoot.hasContent()) {
+                detailsList = productDetailsList(productDetailsRoot);
+            }
 
             response.add(ProductsPricedDto.builder()
                     .title(product.selectSingleNode("//PricedProduct/ProductInformation/Name").getText())
                     .price(product.selectSingleNode("//PriceDetails/PriceDetail[1]").getText())
                     .currency(currencyAttribute)
-                    .details(Collections.singletonList(ProductDetailDto.builder().header("Details not available").build()))
+                    .details(detailsList.orElse(Collections.emptyList()))
                     .build());
         }
 
         return response;
     }
 
-    private List<ProductDetailDto> productDetailsList(final Element productDetailsRoot) {
-        // Todo: check on xml format
-
+    private Optional<List<ProductDetailDto>> productDetailsList(final Element productDetailsRoot) {
         List<ProductDetailDto> detailsList = new ArrayList<>();
 
         log.info("OUTSIDE");
@@ -55,6 +59,6 @@ public class ResponseService {
                     .build());
         }
 
-        return detailsList;
+        return Optional.of(detailsList);
     }
 }

@@ -19,10 +19,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +42,7 @@ public class BaseController {
                                                                @RequestParam("destinationCountry") final String destinationCountry,
                                                                @RequestParam("departureDate") final String departureDate,
                                                                @RequestParam("returnDate") final String returnDate) throws DocumentException {
-        Document productsPriced = requestService.buildRequestDocument(oneWay,
+        Document productsPriced = requestService.buildPricedProductRequestDocument(oneWay,
                 departureCountry,
                 countryOfResidency,
                 destinationCountry,
