@@ -6,6 +6,7 @@ import com.mjdebeer.hepstarbackend.services.request.RequestService;
 import com.mjdebeer.hepstarbackend.services.response.ResponseService;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.SAXReader;
@@ -26,6 +27,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Api
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("api/v1/test")
@@ -81,7 +83,7 @@ public class BaseController {
                                               @RequestParam("nationalId") final String nationalId,
                                               @RequestParam("email") final String email) throws DocumentException {
 
-        Document productsPriced = requestService.buildPolicyIssueDocument(firstName,
+        Document policyIssue = requestService.buildPolicyIssueDocument(firstName,
                 surname,
                 dateOfBirth,
                 residency,
@@ -96,12 +98,14 @@ public class BaseController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_XML);
-        HttpEntity<String> request = new HttpEntity<>(productsPriced.asXML(), headers);
+        HttpEntity<String> request = new HttpEntity<>(policyIssue.asXML(), headers);
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<String> response = restTemplate.postForEntity("https://uat.gateway.insure/policy/issue",
                 request,
                 String.class);
+
+        log.info(policyIssue.asXML());
 
         InputStream inputStream = new ByteArrayInputStream(response.getBody().getBytes(StandardCharsets.UTF_16));
         SAXReader reader = new SAXReader();
