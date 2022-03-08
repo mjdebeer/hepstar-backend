@@ -3,17 +3,10 @@ package com.mjdebeer.hepstarbackend;
 import com.mjdebeer.hepstarbackend.services.request.RequestService;
 import com.mjdebeer.hepstarbackend.services.response.ResponseService;
 import lombok.extern.slf4j.Slf4j;
-import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.dom4j.Node;
-import org.dom4j.io.SAXReader;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.io.InputStream;
-import java.util.Optional;
-import java.util.Scanner;
 
 @SpringBootTest
 @Slf4j
@@ -56,7 +49,6 @@ class ApplicationTests {
 //
 //        responseService.readProductsDocumentAndGenerateResponse(productsResponse);
 
-        // iterate through child elements of root with element name "foo"
 //        for (Iterator<Element> it = request.elementIterator("Username"); it.hasNext();) {
 //            Element foo = it.next();
 //            log.info(foo.getText());

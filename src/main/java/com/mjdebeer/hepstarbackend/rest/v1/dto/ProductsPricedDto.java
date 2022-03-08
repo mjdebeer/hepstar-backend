@@ -16,6 +16,7 @@ public class ProductsPricedDto {
     private String title;
     private String price;
     private String currency;
+    private String productId;
     private List<ProductDetailDto> details;
 
 }

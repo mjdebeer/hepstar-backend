@@ -8,6 +8,7 @@ import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
+import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -36,7 +37,7 @@ public class BaseController {
 
     @SwaggerIncluded
     @GetMapping(value = "productsPriced", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<ProductsPricedDto>> requestTest(@RequestParam("oneWay") final boolean oneWay,
+    public ResponseEntity<List<ProductsPricedDto>> productsPriced(@RequestParam("oneWay") final boolean oneWay,
                                                                @RequestParam("countryOfResidency") final String countryOfResidency,
                                                                @RequestParam("departureCountry") final String departureCountry,
                                                                @RequestParam("destinationCountry") final String destinationCountry,
@@ -65,4 +66,50 @@ public class BaseController {
         return ResponseEntity.ok(responseService.readProductsDocumentAndGenerateResponse(productsResponse));
     }
 
+    @SwaggerIncluded
+    @GetMapping(value = "policyIssue", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> policyIssue(@RequestParam("oneWay") final boolean oneWay,
+                                              @RequestParam("countryOfResidency") final String countryOfResidency,
+                                              @RequestParam("departureCountry") final String departureCountry,
+                                              @RequestParam("destinationCountry") final String destinationCountry,
+                                              @RequestParam("departureDate") final String departureDate,
+                                              @RequestParam("returnDate") final String returnDate,
+                                              @RequestParam("productId") final String productId,
+                                              @RequestParam("firstName") final String firstName,
+                                              @RequestParam("surname") final String surname,
+                                              @RequestParam("dateOfBirth") final String dateOfBirth,
+                                              @RequestParam("residency") final String residency,
+                                              @RequestParam("nationalId") final String nationalId,
+                                              @RequestParam("email") final String email) throws DocumentException {
+
+        Document productsPriced = requestService.buildPolicyIssueDocument(firstName,
+                surname,
+                dateOfBirth,
+                residency,
+                nationalId,
+                email,
+                productId
+                oneWay,
+                departureCountry,
+                countryOfResidency,
+                destinationCountry,
+                departureDate,
+                Optional.ofNullable(returnDate));
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_XML);
+        HttpEntity<String> request = new HttpEntity<>(productsPriced.asXML(), headers);
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> response = restTemplate.postForEntity("https://uat.gateway.insure/policy/issue",
+                request,
+                String.class);
+
+        InputStream inputStream = new ByteArrayInputStream(response.getBody().getBytes(StandardCharsets.UTF_16));
+        SAXReader reader = new SAXReader();
+        Document policyIssueResponse = reader.read(inputStream);
+        String responseStatus = policyIssueResponse.selectSingleNode("//Response/Status/Code").getText();
+
+        return responseStatus.equals("200") ? ResponseEntity.ok("Success") : ResponseEntity.internalServerError().body("Fail");
+    }
 }

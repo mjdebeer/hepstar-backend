@@ -34,6 +34,7 @@ public class ResponseService {
 
             response.add(ProductsPricedDto.builder()
                     .title(product.selectSingleNode("//PricedProduct/ProductInformation/Name").getText())
+                    .productId(product.selectSingleNode("//PricedProduct/ProductInformation/ID").getText())
                     .price(product.selectSingleNode("//PriceDetails/PriceDetail[1]").getText())
                     .currency(currencyAttribute)
                     .details(detailsList.orElse(Collections.emptyList()))
