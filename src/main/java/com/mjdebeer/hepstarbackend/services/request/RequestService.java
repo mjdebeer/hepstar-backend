@@ -138,25 +138,27 @@ public class RequestService {
         travelInformation.addElement("BookingValue").addText("2000");
 
         // Flight Informations
-//        Element flightInformations = travelInformation.addElement("FlightInformations");
-//
-//        Element flightInformationOne = flightInformations.addElement("FlightInformation").addAttribute("Segment", "1");
-//        flightInformationOne.addElement("Airline").addText("EK");
-//        flightInformationOne.addElement("SupplierReference").addText("309");
-//        flightInformationOne.addElement("FlightNumber").addText("XYZ");
-//        flightInformationOne.addElement("StartDate").addText(departureDate);
-//        flightInformationOne.addElement("EndDate").addText(departureDate);
-//        flightInformationOne.addElement("CoverCountries").addElement("CoverCountry").addText(destinationCountry);
-//
-//        if (!oneWay && returnDate.isPresent()) {
-//            Element flightInformationTwo = flightInformations.addElement("FlightInformation").addAttribute("Segment", "2");
-//            flightInformationTwo.addElement("Airline").addText("EK");
-//            flightInformationTwo.addElement("SupplierReference").addText("309");
-//            flightInformationTwo.addElement("FlightNumber").addText("XYZ");
-//            flightInformationTwo.addElement("StartDate").addText(returnDate.get());
-//            flightInformationTwo.addElement("EndDate").addText(returnDate.get());
-//            flightInformationTwo.addElement("CoverCountries").addElement("CoverCountry").addText(departureCountry);
-//        }
+        Element flightInformations = travelInformation.addElement("FlightInformations");
+
+        Element flightInformationOne = flightInformations.addElement("FlightInformation").addAttribute("Segment", "1");
+        flightInformationOne.addElement("Airline").addText("EK");
+        flightInformationOne.addElement("SupplierReference").addText("309");
+        flightInformationOne.addElement("FlightNumber").addText("XYZ");
+        flightInformationOne.addElement("StartDate").addText(departureDate);
+        flightInformationOne.addElement("EndDate").addText(departureDate);
+        flightInformationOne.addElement("DestinationCountry").addText(destinationCountry);
+        flightInformationOne.addElement("CoverCountries").addElement("CoverCountry").addText(destinationCountry);
+
+        if (!oneWay && returnDate.isPresent()) {
+            Element flightInformationTwo = flightInformations.addElement("FlightInformation").addAttribute("Segment", "2");
+            flightInformationTwo.addElement("Airline").addText("EK");
+            flightInformationTwo.addElement("SupplierReference").addText("309");
+            flightInformationTwo.addElement("FlightNumber").addText("XYZ");
+            flightInformationTwo.addElement("StartDate").addText(returnDate.get());
+            flightInformationTwo.addElement("EndDate").addText(returnDate.get());
+            flightInformationTwo.addElement("DestinationCountry").addText(departureCountry);
+            flightInformationTwo.addElement("CoverCountries").addElement("CoverCountry").addText(departureCountry);
+        }
 
         return document;
     }
