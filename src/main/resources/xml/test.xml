@@ -1,0 +1,54 @@
+<Request>
+    <Authentication>
+        <Channel>API</Channel>
+        <Session>{{$guid}}</Session>
+        <Username>impdistributor</Username>
+        <Password>FFRyEGGmMJYHA</Password>
+        <Locale>en_GB</Locale>
+        <Currency>USD</Currency>
+    </Authentication>
+    <RequestParameters>
+        <PolicyRequests>
+            <PolicyRequest>
+                <DistributerReference>{{$guid}}</DistributerReference>
+                <ProductID>ProductId</ProductID>
+                <Insureds>
+                    <Insured ID="1">
+                        <Title/>
+                        <Firstname>Name</Firstname>
+                        <Surname>Surname</Surname>
+                        <DOB>0000-00-00</DOB>
+                        <Residency>ZA</Residency>
+                        <NationalID>123456789</NationalID>
+                        <TravelInformation>
+                            <TravelItemValue>1000</TravelItemValue>
+                        </TravelInformation>
+                    </Insured>
+                </Insureds>
+                <ContactInformation>
+                    <Email>email</Email>
+                </ContactInformation>
+                <TravelInformation>
+                    <StartDate>0000-00-00</StartDate>
+                    <DepartureCountry>ZA</DepartureCountry>
+                    <CoverCountries>
+                        <CoverCountry>BH</CoverCountry>
+                    </CoverCountries>
+                    <BookingValue>2000</BookingValue>
+                    <FlightInformations>
+                        <FlightInformation Segment="1">
+                            <Airline>EK</Airline>
+                            <SupplierReference>309</SupplierReference>
+                            <FlightNumber>XYZ</FlightNumber>
+                            <StartDate>0000-00-00</StartDate>
+                            <EndDate>0000-00-00</EndDate>
+                            <CoverCountries>
+                                <CoverCountry>BH</CoverCountry>
+                            </CoverCountries>
+                        </FlightInformation>
+                    </FlightInformations>
+                </TravelInformation>
+            </PolicyRequest>
+        </PolicyRequests>
+    </RequestParameters>
+</Request>

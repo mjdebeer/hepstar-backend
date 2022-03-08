@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Optional;
+
 @SpringBootTest
 @Slf4j
 class ApplicationTests {
@@ -53,6 +55,20 @@ class ApplicationTests {
 //            Element foo = it.next();
 //            log.info(foo.getText());
 //        }
+
+        log.info(requestService.buildPolicyIssueDocument("Name",
+                "Surname",
+                "0000-00-00",
+                "ZA",
+                "123456789",
+                "email",
+                "ProductId",
+                true,
+                "0000-00-00",
+                Optional.of("0000-00-00"),
+                "ZA",
+                "BH").asXML());
+
 
     }
 

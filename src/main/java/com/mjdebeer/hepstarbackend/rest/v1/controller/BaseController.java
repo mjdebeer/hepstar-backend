@@ -105,8 +105,6 @@ public class BaseController {
                 request,
                 String.class);
 
-        log.info(policyIssue.asXML());
-
         InputStream inputStream = new ByteArrayInputStream(response.getBody().getBytes(StandardCharsets.UTF_16));
         SAXReader reader = new SAXReader();
         Document policyIssueResponse = reader.read(inputStream);
