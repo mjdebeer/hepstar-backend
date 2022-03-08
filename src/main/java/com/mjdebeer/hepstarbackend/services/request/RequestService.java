@@ -125,7 +125,7 @@ public class RequestService {
         insured.addElement("TravelInformation").addElement("TravelItemValue").addText("1000");
 
         // Contact Information
-        policyRequest.addElement("ContactInformation").addText(email);
+        policyRequest.addElement("ContactInformation").addElement("Email").addText(email);
 
         // Travel Information
         Element travelInformation = policyRequest.addElement("TravelInformation");
