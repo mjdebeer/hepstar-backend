@@ -8,7 +8,6 @@ import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -88,13 +87,12 @@ public class BaseController {
                 residency,
                 nationalId,
                 email,
-                productId
+                productId,
                 oneWay,
-                departureCountry,
-                countryOfResidency,
-                destinationCountry,
                 departureDate,
-                Optional.ofNullable(returnDate));
+                Optional.ofNullable(returnDate),
+                departureCountry,
+                destinationCountry);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_XML);
