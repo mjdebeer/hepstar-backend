@@ -11,29 +11,28 @@
         <PolicyRequests>
             <PolicyRequest>
                 <DistributerReference>{{$guid}}</DistributerReference>
-                <ProductID>ProductId</ProductID>
+                <ProductID>TestBRB</ProductID>
                 <Insureds>
                     <Insured ID="1">
                         <Title/>
-                        <Firstname>Name</Firstname>
-                        <Surname>Surname</Surname>
-                        <DOB>0000-00-00</DOB>
+                        <Firstname>MJ</Firstname>
+                        <Surname>De Beer</Surname>
+                        <DOB>1992-02-07</DOB>
                         <Residency>ZA</Residency>
-                        <NationalID>123456789</NationalID>
+                        <NationalID>1234567894561</NationalID>
                         <TravelInformation>
                             <TravelItemValue>1000</TravelItemValue>
                         </TravelInformation>
                     </Insured>
                 </Insureds>
                 <ContactInformation>
-                    <Email>email</Email>
+                    <Email>info@mjdebeer.com</Email>
                 </ContactInformation>
                 <TravelInformation>
-                    <StartDate>0000-00-00</StartDate>
-                    <EndDate>0000-00-00</EndDate>
+                    <StartDate>2022-05-01</StartDate>
                     <DepartureCountry>ZA</DepartureCountry>
                     <CoverCountries>
-                        <CoverCountry>BH</CoverCountry>
+                        <CoverCountry>BA</CoverCountry>
                     </CoverCountries>
                     <BookingValue>2000</BookingValue>
                     <FlightInformations>
@@ -41,22 +40,11 @@
                             <Airline>EK</Airline>
                             <SupplierReference>309</SupplierReference>
                             <FlightNumber>XYZ</FlightNumber>
-                            <StartDate>0000-00-00</StartDate>
-                            <EndDate>0000-00-00</EndDate>
-                            <DestinationCountry>BH</DestinationCountry>
+                            <StartDate>2022-05-01</StartDate>
+                            <EndDate>2022-05-01</EndDate>
+                            <DestinationCountry>BA</DestinationCountry>
                             <CoverCountries>
-                                <CoverCountry>BH</CoverCountry>
-                            </CoverCountries>
-                        </FlightInformation>
-                        <FlightInformation Segment="2">
-                            <Airline>EK</Airline>
-                            <SupplierReference>309</SupplierReference>
-                            <FlightNumber>XYZ</FlightNumber>
-                            <StartDate>0000-00-00</StartDate>
-                            <EndDate>0000-00-00</EndDate>
-                            <DestinationCountry>ZA</DestinationCountry>
-                            <CoverCountries>
-                                <CoverCountry>ZA</CoverCountry>
+                                <CoverCountry>BA</CoverCountry>
                             </CoverCountries>
                         </FlightInformation>
                     </FlightInformations>
