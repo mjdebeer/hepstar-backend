@@ -63,12 +63,11 @@ class ApplicationTests {
                 "123456789",
                 "email",
                 "ProductId",
-                true,
+                false,
                 "0000-00-00",
                 Optional.of("0000-00-00"),
                 "ZA",
                 "BH").asXML());
-
 
     }
 

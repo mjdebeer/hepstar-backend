@@ -1,5 +1,6 @@
 package com.mjdebeer.hepstarbackend.services.request;
 
+import lombok.extern.slf4j.Slf4j;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Slf4j
 @Service
 public class RequestService {
 
@@ -159,6 +161,8 @@ public class RequestService {
             flightInformationTwo.addElement("DestinationCountry").addText(departureCountry);
             flightInformationTwo.addElement("CoverCountries").addElement("CoverCountry").addText(departureCountry);
         }
+
+        log.info(document.asXML());
 
         return document;
     }

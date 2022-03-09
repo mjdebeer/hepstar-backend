@@ -30,6 +30,7 @@
                 </ContactInformation>
                 <TravelInformation>
                     <StartDate>0000-00-00</StartDate>
+                    <EndDate>0000-00-00</EndDate>
                     <DepartureCountry>ZA</DepartureCountry>
                     <CoverCountries>
                         <CoverCountry>BH</CoverCountry>
@@ -42,8 +43,20 @@
                             <FlightNumber>XYZ</FlightNumber>
                             <StartDate>0000-00-00</StartDate>
                             <EndDate>0000-00-00</EndDate>
+                            <DestinationCountry>BH</DestinationCountry>
                             <CoverCountries>
                                 <CoverCountry>BH</CoverCountry>
+                            </CoverCountries>
+                        </FlightInformation>
+                        <FlightInformation Segment="2">
+                            <Airline>EK</Airline>
+                            <SupplierReference>309</SupplierReference>
+                            <FlightNumber>XYZ</FlightNumber>
+                            <StartDate>0000-00-00</StartDate>
+                            <EndDate>0000-00-00</EndDate>
+                            <DestinationCountry>ZA</DestinationCountry>
+                            <CoverCountries>
+                                <CoverCountry>ZA</CoverCountry>
                             </CoverCountries>
                         </FlightInformation>
                     </FlightInformations>
