@@ -78,14 +78,13 @@ public class BaseController {
                                               @RequestParam("firstName") final String firstName,
                                               @RequestParam("surname") final String surname,
                                               @RequestParam("dateOfBirth") final String dateOfBirth,
-                                              @RequestParam("residency") final String residency,
                                               @RequestParam("nationalId") final String nationalId,
                                               @RequestParam("email") final String email) throws DocumentException {
 
         Document policyIssue = requestService.buildPolicyIssueDocument(firstName,
                 surname,
                 dateOfBirth,
-                residency,
+                countryOfResidency,
                 nationalId,
                 email,
                 productId,
